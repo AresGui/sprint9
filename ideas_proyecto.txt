@@ -1,0 +1,48 @@
+
+React projects:
+- yoga studio
+- tienda de muebles o maquillaje
+- e-comerce
+Duda-> cómo utilizar una API externa en estos casos?
+
+- plataforma de streaming televisio service --> problema tipo búsqueda
+
+PASOS:
+
+3. Do private routes for Movies and Series after Sign in
+4. Do conext API
+5. Create Service folder with APIs 
+
+pages folder instead of components folder?
+
+
+COMPONENTS
+1. LandingPage
+NavBar with SignIn and SignUp
+
+Once signed in --> redirected to Home 
+Access to Movies and Series, not before.(PRIVATE ACCESS)
+2. Home
+Here the NavBar has: Logo, Movies, Series and Search 
+- Movies
+- Series
+
+
+
+(And just like that and phone call with Alejandro)
+
+
+
+Nombre del proyecto
+film streaming app
+ID del proyecto
+film-streaming-app
+Número de proyecto
+1001608809896
+Ubicación predeterminada de los recursos de GCP
+Aún sin seleccionar
+Clave de API web
+AIzaSyDZ1tzsidhmiWm3Fpq-xkzMCKGuiTWPaFA
+
+
+

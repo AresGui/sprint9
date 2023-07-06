@@ -1,0 +1,23 @@
+.NavWrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 2px pink dotted;
+    justify-content: space-between;
+    background-color: rgba(34, 34, 34, 0.5);
+}
+
+.Logo {
+    border: 2px blue dotted;
+}
+
+.RegisterWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px orange dotted;
+}
+
+.RegisterWrapper>a {
+    margin: 10px;
+}
