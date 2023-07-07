@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Route, Routes, Navigate } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Home from '../components/Home';
 import SignIn from '../components/SignIn';
@@ -7,14 +7,22 @@ import SignUp from '../components/SignUp';
 import Movies from '../components/Movies/Movies';
 import Series from '../components/Series/Series';
 
-import PrivateRoute from '../components/PrivateRoute';
+import { AuthenticatedContext } from '../components/AuthenticatedContext';
+
 
 const RouterConfig = () => {
+    /* const [isAuthenticated, setIsAuthenticated] = useContext(AuthenticatedContext); */
+    const { isAuthenticated } = useContext(AuthenticatedContext);
+
     return (
         <div>
             <Routes>
                 <Route exact path="/" element={<LandingPage />} />
-                <PrivateRoute auth={isAutheticated} path="/Home" element={<Home />} />
+                <Route
+                    path="/Home"
+                    element={isAuthenticated ? (<Home />) : (<Navigate to="/" replace />)}
+                />
+                <Route path="/Home" element={<Home />} />
                 <Route path="/Signin" element={<SignIn />} />
                 <Route path="/Signup" element={<SignUp />} />
                 <Route path='/Movies' element={<Movies />}></Route>
