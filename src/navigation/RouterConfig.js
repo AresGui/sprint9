@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom';
-import LandingPage from '../components/LandingPage';
-import Home from '../components/Home';
-import SignIn from '../components/SignIn';
-import SignUp from '../components/SignUp';
-import Movies from '../components/Movies/Movies';
-import Series from '../components/Series/Series';
+import LandingPage from '../pages/LandingPage/LandingPage';
+import Home from '../pages/Home/Home';
+import SignIn from '../pages/SignIn/SignIn';
+import SignUp from '../pages/SignUp/SignUp';
+import Movies from '../pages/Movies/Movies';
+import Series from '../pages/Series/Series';
 
-import { AuthenticatedContext } from '../components/AuthenticatedContext';
+import { AuthenticatedContext } from '../navigation/AuthenticatedContext';
 
 
 const RouterConfig = () => {
