@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavbarContainer, Logo, LinksContainer, Li, StyledLink, ToggleButton, ToggleBar } from './MainNavBar.styles';
+import { NavbarContainer, Logo, LinksContainer, LiLeft, LiRight, StyledLink, ToggleButton, ToggleBar } from './MainNavBar.styles';
 
 const MainNavBar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -19,8 +19,8 @@ const MainNavBar = () => {
                 <ToggleBar></ToggleBar>
             </ToggleButton>
             <LinksContainer isOpen={isMenuOpen}>
-                <Li><StyledLink href="/Signin">SIGN IN</StyledLink></Li>
-                <Li><StyledLink href="/Signup">SIGN UP</StyledLink></Li>
+                <LiLeft><StyledLink href="/Signin">SIGN IN</StyledLink></LiLeft>
+                <LiRight><StyledLink href="/Signup">SIGN UP</StyledLink></LiRight>
             </LinksContainer>
         </NavbarContainer>
     )

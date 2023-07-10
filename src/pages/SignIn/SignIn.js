@@ -4,6 +4,9 @@ import { auth } from '../../services/firebase';
 import { useNavigate } from 'react-router-dom';
 import { AuthenticatedContext } from '../../navigation/AuthenticatedContext';
 import MainNavBar from '../../navigation/components/MainNavBar/MainNavBar';
+import { Background, MainContainer } from '../LandingPage/LandingPage.styles';
+import { Text, Label, FormButton, FormButtonContainer, Input, Title, TextContainer, SignupRedirect, SignupInfo, MainDiv2 } from './SignIn.styles';
+
 
 function SignIn() {
     const { isAuthenticated, setIsAuthenticated } = useContext(AuthenticatedContext);
@@ -29,25 +32,35 @@ function SignIn() {
         console.log(`email: ${email} Pass: ${pass}`);
     }
 
-    //redirect to sign up
-    const redirectButton = () => {
-        navigate("/Signup");
-    }
 
     return (
-        <div>
-            <MainNavBar />
-            <h1>SIGN IN</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email">email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='youremail@gmail.com' id="email" name="email" />
-                <label htmlFor="password">Password</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder='********' id="password" name="password" />
-                <button type="submit">Sign in</button>
-            </form>
-            <p>Yo don't have an account?</p>
-            <button onClick={redirectButton}>Sign up here</button>
-        </div>
+        <>
+            <Background>
+                <MainNavBar />
+                <MainContainer>
+                    <MainDiv2>
+                        <TextContainer>
+                            <Title>SIGN IN</Title>
+                            <form onSubmit={handleSubmit}>
+                                <Text>
+                                    <Label htmlFor="email">Email</Label>
+                                    <Input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='youremail@email.com' id="email" name="email" />
+                                    <Label htmlFor="password">Password</Label>
+                                    <Input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder='******' id="password" name="password" />
+                                </Text>
+                                <FormButtonContainer>
+                                    <FormButton type="submit">Sign in</FormButton>
+                                </FormButtonContainer>
+                            </form>
+                            <SignupInfo>
+                                <p>Yo don't have an account?</p>
+                                <SignupRedirect href="/Signup">Sign up here</SignupRedirect>
+                            </SignupInfo>
+                        </TextContainer>
+                    </MainDiv2>
+                </MainContainer>
+            </Background>
+        </>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import SecondaryNavBar from '../../navigation/components/SecondaryNavBar'
+import SecondaryNavBar from '../../navigation/components/SecondaryNavBar/SecondaryNavBar';
 
 function Series() {
   return (

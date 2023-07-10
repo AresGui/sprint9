@@ -1,58 +1,97 @@
 import styled from 'styled-components';
-import backgroundImage from '../../assets/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg';
-import starts from '../../assets/stars.jpg'
+
+import film from '../../assets/film.jpg'
 
 
 export const Background = styled.div`
-  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${backgroundImage}); */
-  background-image: url(${starts});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${film});
+  /* background-image: url(${film}); */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 65% 35%;
+  background-position: center;
   height: 100%;
+
 `;
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-   max-height: 100%;
-    overflow-y: scroll;
+  justify-content: start;
+  height: 100vh;
+  padding-top: 50px;
 `;
 
 export const MainDiv = styled.div`
-font-family: 'Bitter', serif;
-font-size: 30px;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
 text-align: center;
 padding: 30px;
-height: 500px;
-width: 400px;
-color: black;
-background: rgba(193, 130, 130, 0.8);
-border: 4px black;
-border-radius: 4px;
-margin: 80px;
+height: auto;
+width: auto;
+color: white;
+background: rgba(19, 19, 18, 0.9);
+border: 5px black;
+border-radius: 5px;
+
+@media (max-width: 560px) {
+   padding: 20px;
+    margin: 0px 50px;
+ }
 `;
 
+export const LogoLanding = styled.h1`
+ font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin: 5px 0;
+
+   @media (max-width: 560px) {
+  font-size: 2rem;
+ }
+`;
+
+export const StyledWord = styled.span`
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: #b2d963;
+   @media (max-width: 560px) {
+  font-size: 2rem;
+ }
+`;
+
+export const TextWrapper = styled.div`
+font-family: 'Narnoor', serif;
+  font-size: 1.3rem;
+
+  @media (max-width: 560px) {
+  font-size: 1rem;
+ }
+`
+
 export const Button = styled.button`
-font-family: 'Bitter', serif;
-font-size: xx-large;
+font-family: 'Narnoor', serif;
+  font-size: 1.1rem;
+  font-weight: bolder;
  background: none;
- color: white;
+background-color: #8bac4a;
+color: white;
+font-weight: bold;
  cursor: pointer;
- font-size: 15px;
- margin: 30px;
- padding: 10px 25px;
- border: 1px solid whitesmoke;
+margin: 10px;
+ width: 50%;
+ padding: 5px;
+ height: auto;
  border-radius: 5px;
  display: inline-block;
 
   &:hover {
-    background-color: #373535;
+     background-color: #b2d963;
     }
+
+    @media (max-width: 560px) {
+  font-size: 0.9rem;
+ }
 `;

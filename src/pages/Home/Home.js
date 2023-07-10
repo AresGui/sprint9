@@ -1,5 +1,5 @@
 import React from 'react'
-import SecondaryNavBar from '../../navigation/components/SecondaryNavBar';
+import SecondaryNavBar from '../../navigation/components/SecondaryNavBar/SecondaryNavBar';
 import Main from './Main';
 import Row from './Row';
 import requests from '../../services/Requests';

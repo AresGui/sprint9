@@ -23,6 +23,10 @@ export const Logo = styled.a`
  /*  font-weight: bold; */
   color: inherit;
   text-decoration: none;
+
+   @media (max-width: 560px) {
+    font-size: 2.5rem;
+ }
 `;
 
 export const LinksContainer = styled.ul`
@@ -30,22 +34,24 @@ export const LinksContainer = styled.ul`
    align-items: center;
    justify-content: center !important;
    margin: 0;
-
-
+   
    @media (max-width: 560px) {
       display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')} !important;
       flex-direction: column;
-      width: 100%;
+      padding: 0;
       margin: 0;
+      width: 100%;   
    }
 `;
 
-export const Li = styled.li`
+export const LiLeft = styled.li`
    list-style: none;
-   padding: 10px 20px;
-   border-radius: 5px;
+   padding: 5px 10px;
+   margin: 0 7px;
+   border-radius: 10px;
+   border: #b2d963 solid 3px;
       &:hover {
-      background-color: #a38e8e;
+      background-color: #b2d963;
       }
 
       @media (max-width: 560px) {
@@ -53,10 +59,32 @@ export const Li = styled.li`
       width: 100%;
       text-align: center;
       padding: none;
+      background-color: none;
+      border: #b2d963 solid 3px;
       &:hover {
-      background-color: #a38e8e;
+         background-color: #b2d963;
+      }
+      }   
+      &:hover {
+      background-color: #b2d963;
       }
  }
+`;
+
+export const LiRight = styled(LiLeft)`
+background-color: #b2d963;
+      &:hover {
+      background-color: none;
+      border: #b2d963 solid 3px;
+      }
+
+      @media (max-width: 560px) {
+         background-color: transparent;
+      border: #b2d963 solid 3px;
+      &:hover {
+         background-color: #b2d963;
+      }
+      }
 `;
 
 export const StyledLink = styled.a`
@@ -68,6 +96,9 @@ export const StyledLink = styled.a`
   width: 100%; 
   box-sizing: border-box;
 
+  @media (max-width:560px) {
+   font-size: 2rem;
+  }
 `;
 
 export const ToggleButton = styled.a`

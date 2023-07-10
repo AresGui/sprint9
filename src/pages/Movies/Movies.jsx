@@ -1,6 +1,6 @@
 import React from 'react'
 import Row from '../Home/Row'
-import SecondaryNavBar from '../../navigation/components/SecondaryNavBar'
+import SecondaryNavBar from '../../navigation/components/SecondaryNavBar/SecondaryNavBar';
 import requests from '../../services/Requests';
 
 function Movies() {
