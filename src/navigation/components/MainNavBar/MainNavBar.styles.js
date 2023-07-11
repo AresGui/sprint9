@@ -50,6 +50,7 @@ export const LiLeft = styled.li`
    margin: 0 7px;
    border-radius: 10px;
    border: #b2d963 solid 3px;
+   
       &:hover {
       background-color: #b2d963;
       }
@@ -89,8 +90,8 @@ background-color: #b2d963;
 
 export const StyledLink = styled.a`
   text-decoration: none;
-   font-family: 'Bebas Neue', sans-serif;
-   font-size: 2.0rem;
+   font-family: 'Narnoor', serif;
+   font-size: 1.5rem;
   color: white;
   display: block;
   width: 100%; 

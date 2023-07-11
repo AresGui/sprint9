@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import requests from '../../services/Requests';
+import { MainImage, MainContainer, Image } from './Main.styles';
 
 function Main() {
     const [movies, setMovies] = useState([]);
@@ -13,34 +14,35 @@ function Main() {
         });
     }, []);
 
+    console.log(movie);
+
     return (
-        <>
+        <MainContainer>
+            <MainImage>
+                <Image
+                    src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+                    alt={movie?.title}
+                />
+            </MainImage>
             <div>
+                <h1>{movie?.title}</h1>
                 <div>
-                    <img
-                        src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
-                        alt={movie?.title}
-                    />
-                    <div>
-                        <h1>{movie?.title}</h1>
-                        <div>
-                            <button>
-                                Play
-                            </button>
-                            <button>
-                                Watch Later
-                            </button>
-                        </div>
-                        <p>
-                            Released: {movie?.release_date}
-                        </p>
-                        <p>
-                            {movie?.overview}
-                        </p>
-                    </div>
+                    <button>
+                        Play
+                    </button>
+                    <button>
+                        Watch Later
+                    </button>
                 </div>
+                <p>
+                    Released: {movie?.release_date}
+                </p>
+                <p>
+                    {movie?.overview}
+                </p>
             </div>
-        </>
+        </MainContainer>
+
     )
 }
 
