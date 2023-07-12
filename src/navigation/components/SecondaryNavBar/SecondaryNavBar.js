@@ -13,7 +13,7 @@ const SecondaryNavBar = () => {
     return (
         <NavbarContainer>
             <div>
-                <Logo href="Home">FILMFLIX</Logo>
+                <Logo href="/Home">FILMFLIX</Logo>
             </div>
             <ToggleButton onClick={toggleMenu} isOpen={isMenuOpen} href="#">
                 <ToggleBar></ToggleBar>

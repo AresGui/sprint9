@@ -7,16 +7,13 @@ margin-right: 20px;
 export const StyledRow = styled.div`
  display: flex;
   flex-wrap: nowrap;
-  border: red solid 2px;
    overflow-x: hidden;
-    padding-left: 50px; 
  `;
 
 export const BigContainer = styled.div`
  max-width: 100%;
  position: relative;
  font-family: 'Narnoor', serif;
-  border: purple solid 2px;
   margin: 20px;
  `
 

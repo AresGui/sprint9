@@ -50,6 +50,8 @@ export const LiLeft = styled.li`
    margin: 0 7px;
    border-radius: 10px;
    border: #b2d963 solid 3px;
+   display: flex;
+   align-items: center; 
    
       &:hover {
       background-color: #b2d963;
@@ -69,7 +71,6 @@ export const LiLeft = styled.li`
       &:hover {
       background-color: #b2d963;
       }
- }
 `;
 
 export const LiRight = styled(LiLeft)`
@@ -96,6 +97,8 @@ export const StyledLink = styled.a`
   display: block;
   width: 100%; 
   box-sizing: border-box;
+   display: flex;
+   align-items: center; 
 
   @media (max-width:560px) {
    font-size: 2rem;
