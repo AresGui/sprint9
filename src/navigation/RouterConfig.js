@@ -22,11 +22,16 @@ const RouterConfig = () => {
                     path="/Home"
                     element={isAuthenticated ? (<Home />) : (<Navigate to="/" replace />)}
                 />
-                <Route path="/Home" element={<Home />} />
                 <Route path="/Signin" element={<SignIn />} />
                 <Route path="/Signup" element={<SignUp />} />
-                <Route path='/Movies' element={<Movies />}></Route>
-                <Route path='/Series' element={<Series />} ></Route>
+                <Route
+                    path="/Movies"
+                    element={isAuthenticated ? (<Movies />) : (<Navigate to="/" replace />)}
+                />
+                <Route
+                    path="/Series"
+                    element={isAuthenticated ? (<Series />) : (<Navigate to="/" replace />)}
+                />
                 <Route path="*" element={<div>404</div>} />
             </Routes>
         </div>
