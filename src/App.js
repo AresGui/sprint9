@@ -1,13 +1,16 @@
 import { BrowserRouter } from 'react-router-dom';
-import Router from '../src/navigation/RouterConfig';
+import RouterConfig from '../src/navigation/RouterConfig';
+import { Authentication } from './navigation/AuthenticatedContext';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    </div>
+    <Authentication>
+      <div>
+        <BrowserRouter>
+          <RouterConfig />
+        </BrowserRouter>
+      </div>
+    </Authentication>
   );
 }
 
